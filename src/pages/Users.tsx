@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "../components/Nav";
 import Menu from "../components/Menu";
 
-const Users = () => {
+const Users = () : JSX.Element => {
     return (
         <div>
             <Nav/>

@@ -2,7 +2,16 @@ import React, {useEffect, useState} from "react";
 import Layout from "../components/Layout";
 import axios from "axios";
 import {User} from "../models/user";
-import {Table, TableBody, TableCell, TableFooter, TableHead, TablePagination, TableRow} from "@material-ui/core";
+import {
+    Button,
+    Table,
+    TableBody,
+    TableCell,
+    TableFooter,
+    TableHead,
+    TablePagination,
+    TableRow
+} from "@material-ui/core";
 
 const Users = (): JSX.Element => {
     const [users, setUsers] = useState<User[]>([]);
@@ -38,7 +47,15 @@ const Users = (): JSX.Element => {
                                 <TableCell>{user.id}</TableCell>
                                 <TableCell>{user.first_name} {user.last_name}</TableCell>
                                 <TableCell>{user.email}</TableCell>
-                                <TableCell></TableCell>
+                                <TableCell>
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
+                                        href={`users/${user.id}/links`}
+                                    >
+                                        View
+                                    </Button>
+                                </TableCell>
                             </TableRow>
                         );
                     })}

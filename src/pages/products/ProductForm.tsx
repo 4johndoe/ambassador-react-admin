@@ -18,15 +18,19 @@ const ProductForm = () => {
             title,
             description,
             image,
-            price,
+            price: +price,
         })
 
-        await axios.post('products', {
-            title,
-            description,
-            image,
-            price,
-        });
+        try {
+            await axios.post('products', {
+                title,
+                description,
+                image,
+                price: +price,
+            });
+        } catch (e) {
+            console.log(e);
+        }
 
         setRedirect(true);
     }

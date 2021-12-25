@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import {RedirectToUsers} from "./components/RedirectToUsers";
 import Links from "./pages/Links";
+import Products from "./pages/products/Products";
 
 function App(): JSX.Element {
   return (
@@ -16,6 +17,7 @@ function App(): JSX.Element {
           <Route path="/register" component={Register}/>
           <Route path="/users" exact component={Users}/>
           <Route path="/users/:id/links" component={Links}/>
+          <Route path="/products" component={Products}/>
       </BrowserRouter>
     </div>
   );

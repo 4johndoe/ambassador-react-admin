@@ -10,6 +10,9 @@ const Menu = () : JSX.Element => {
                         <NavLink to={'/users'} className="nav-link active" aria-current="page" href="#">
                             Users
                         </NavLink>
+                        <NavLink to={'/products'} className="nav-link active" aria-current="page" href="#">
+                            Products
+                        </NavLink>
                     </li>
                 </ul>
             </div>

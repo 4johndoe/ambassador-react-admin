@@ -1,7 +1,6 @@
 import React from "react";
 import {User} from "../models/user";
 import {Link} from "react-router-dom";
-import {log} from "util";
 import axios from "axios";
 
 
@@ -12,11 +11,11 @@ const Nav = (props: { user: User | null}) : JSX.Element => {
 
             <ul className="my-2 my-md0 mr-md-3">
                 <Link to={'/profile'}
-                   className="--2 text-white text-decoration-none">
+                      className="p-2 text-white text-decoration-none">
                     {props.user?.first_name} {props.user?.last_name}
                 </Link>
                 <Link to={'/login'}
-                      className="--2 text-white text-decoration-none"
+                      className="p-2 text-white text-decoration-none"
                       onClick={async () => await axios.post('logout')}>
                     Sign out
                 </Link>

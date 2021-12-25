@@ -39,11 +39,15 @@ const Products = () => {
     return (
         <Layout>
             <Table>
+                <div className="pt-3 pb-2 mb-3 border-bottom">
+                    <Button href={'/products/create'} variant="contained" color="primary">Add</Button>
+                </div>
                 <TableHead>
                     <TableRow>
                         <TableCell>#</TableCell>
                         <TableCell>Image</TableCell>
                         <TableCell>Title</TableCell>
+                        <TableCell>Description</TableCell>
                         <TableCell>Price</TableCell>
                         <TableCell>Actions</TableCell>
                     </TableRow>

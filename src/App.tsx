@@ -7,6 +7,7 @@ import Register from "./pages/Register";
 import {RedirectToUsers} from "./components/RedirectToUsers";
 import Links from "./pages/Links";
 import Products from "./pages/products/Products";
+import ProductForm from "./pages/products/ProductForm";
 
 function App(): JSX.Element {
   return (
@@ -17,7 +18,8 @@ function App(): JSX.Element {
           <Route path="/register" component={Register}/>
           <Route path="/users" exact component={Users}/>
           <Route path="/users/:id/links" component={Links}/>
-          <Route path="/products" component={Products}/>
+          <Route path="/products" exact component={Products}/>
+          <Route path="/products/create" component={ProductForm}/>
       </BrowserRouter>
     </div>
   );

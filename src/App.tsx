@@ -9,6 +9,7 @@ import Links from "./pages/Links";
 import Products from "./pages/products/Products";
 import ProductForm from "./pages/products/ProductForm";
 import Orders from "./pages/Orders";
+import Profile from "./pages/Profile";
 
 function App(): JSX.Element {
   return (
@@ -23,6 +24,7 @@ function App(): JSX.Element {
           <Route path="/products/create" component={ProductForm}/>
           <Route path="/products/:id/edit" component={ProductForm}/>
           <Route path="/orders" component={Orders}/>
+          <Route path="/profile" component={Profile}/>
       </BrowserRouter>
     </div>
   );
